@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0d0d0d;
+}
+
+html {
+  scroll-behavior: smooth;
+}

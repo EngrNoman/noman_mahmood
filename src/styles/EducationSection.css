@@ -1,0 +1,92 @@
+.education-section {
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 30px;
+}
+
+/* Container for cards */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  /* Mobile-first: stack */
+  gap: 20px;
+  align-items: center;
+}
+
+/* Card style */
+.edu-card {
+  background-color: #1e1e1e;
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: default;
+}
+
+.edu-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.edu-icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.edu-info h3 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #00ffff;
+}
+
+.edu-info .institution {
+  font-size: 0.95rem;
+  color: #b0f0f0;
+}
+
+.edu-info .year {
+  font-size: 0.85rem;
+  color: #88f0f0;
+}
+
+.edu-info .note {
+  font-size: 0.85rem;
+  color: #a0f0f0;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* Responsive: larger screens */
+@media (min-width: 768px) {
+  .education-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .edu-card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .edu-card {
+    width: 40%;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}

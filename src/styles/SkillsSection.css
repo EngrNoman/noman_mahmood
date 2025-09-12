@@ -1,0 +1,105 @@
+.skills-section {
+  background-color: #121212;
+  color: #e0e0e0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 30px;
+}
+
+/* Container for cards */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  /* Mobile-first: stack vertically */
+  gap: 20px;
+  align-items: center;
+}
+
+/* Card styles */
+.skill-card {
+  background-color: #1e1e1e;
+  border: 2px solid #00ffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  /* Mobile: full width */
+  max-width: 400px;
+  /* Limit card width on larger screens */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.skill-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #00ffff;
+}
+
+.skill-card .pitch {
+  font-style: italic;
+  margin-bottom: 12px;
+  color: #b0f0f0;
+}
+
+.skill-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-card ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-card ul li svg {
+  margin-right: 8px;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: #88f0f0;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+.footer-line {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #a0f0f0;
+}
+
+/* Responsive: larger screens */
+@media (min-width: 768px) {
+  .skills-container {
+    flex-direction: row;
+    /* side-by-side */
+    justify-content: center;
+  }
+
+  .skill-card {
+    width: 45%;
+    /* two cards side by side */
+  }
+}
+
+@media (min-width: 1200px) {
+  .skill-card {
+    width: 40%;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}

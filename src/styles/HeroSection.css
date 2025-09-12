@@ -1,0 +1,224 @@
+.hero-container {
+  width: 100%;
+  margin-top: 60px;
+  /* height: 90vh; */
+  position: relative;
+  /* or static */
+  top: 0vh;
+  /* push below navbar */
+  /* fits under navbar */
+  background-color: #0a0a0a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  /* overflow-x: hidden; */
+  position: relative;
+
+}
+
+/* Background particles */
+.particles-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: floatParticles 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes floatParticles {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 200px 200px;
+  }
+}
+
+/* Profile Picture & Glow */
+.profile-container {
+  position: relative;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #1d4ed8;
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(29, 78, 216, 0.3);
+  filter: blur(12px);
+  z-index: 1;
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.9;
+  }
+}
+
+/* Hero Title */
+.hero-text {
+  color: #00ffcc;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  max-width: 90%;
+  line-height: 1.2;
+  z-index: 1;
+}
+
+/* Name + Description (Left-aligned) */
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100%;
+  z-index: 1;
+  padding: 0 10px;
+}
+
+.hero-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hero-description p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.hero-description ul {
+  list-style: none;
+  /* remove default bullets */
+  margin-left: 20px;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.hero-description li {
+  position: relative;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  /* space for bullet */
+}
+
+.hero-description li::before {
+  content: "•";
+  /* bullet */
+  position: absolute;
+  left: 0;
+  color: #1d4ed8;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* LinkedIn Button */
+.linkedin-button {
+  background-color: #0a66c2;
+  color: white;
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+.linkedin-button:hover {
+  background-color: #004182;
+  transform: scale(1.05);
+}
+
+/* Medium screens (tablet) */
+@media (min-width: 600px) {
+
+
+  .hero-text {
+    font-size: 1.6rem;
+  }
+
+  .hero-name {
+    font-size: 1.5rem;
+  }
+
+  .hero-description p {
+    font-size: 0.95rem;
+  }
+
+  .profile-pic {
+    width: 110px;
+    height: 110px;
+  }
+
+  .profile-glow {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* Large screens (desktop) */
+@media (min-width: 992px) {
+  .hero-container {
+    padding: 60px 40px;
+    overflow: hidden;
+  }
+
+  .hero-text {
+    font-size: 2rem;
+  }
+
+  .hero-name {
+    font-size: 1.8rem;
+  }
+
+  .hero-description p {
+    font-size: 1rem;
+  }
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-glow {
+    width: 140px;
+    height: 140px;
+  }
+}
