@@ -98,7 +98,7 @@ const ProjectsSection = () => {
               <strong>Tech:</strong> {project.tech}
             </p>
 
-            <Link to={`/noman_mahmood/case-study`}>
+            <Link to={`/case-study`}>
               <button className="view-btn">View</button>
             </Link>
           </div>
