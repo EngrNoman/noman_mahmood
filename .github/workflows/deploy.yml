@@ -3,7 +3,7 @@ name: Deploy Portfolio
 on:
   push:
     branches:
-      - main # jab bhi main branch pe push hoga, ye run karega
+      - main   # jab bhi main branch pe push hoga, ye run karega
 
 jobs:
   build-and-deploy:
