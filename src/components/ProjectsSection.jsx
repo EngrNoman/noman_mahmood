@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import "../styles/ProjectsSection.css";
 import profilePic from "./profile.jpg"; // replace with your image
 
@@ -96,9 +97,10 @@ const ProjectsSection = () => {
             <p className="tech">
               <strong>Tech:</strong> {project.tech}
             </p>
-            <a href={project.link} target="_blank" rel="noreferrer">
+
+            <Link to={`/noman_mahmood/case-study`}>
               <button className="view-btn">View</button>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
