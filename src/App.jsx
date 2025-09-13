@@ -1,26 +1,13 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import ScrollToTopButton from "./components/ScrollToTopButton";
-import HeroSection from "./components/HeroSection";
-import SkillsSection from "./components/SkillsSection";
-import EducationSection from "./components/EducationSection";
-import ContactSection from "./components/ContactSection";
-import Footer from "./components/Footer";
-import ProjectSection from "./components/ProjectsSection";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import CaseStudy from "./pages/CaseStudy.jsx";
+
 function App() {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      <SkillsSection />
-      <ProjectSection />
-
-      <EducationSection />
-      <ContactSection />
-      <Footer />
-      {/* Scroll-to-Top Button */}
-      <ScrollToTopButton />
-    </div>
+    <Routes>
+      <Route path="noman_mahmood/" element={<Home />} />
+      <Route path="noman_mahmood/case-study" element={<CaseStudy />} />
+    </Routes>
   );
 }
 

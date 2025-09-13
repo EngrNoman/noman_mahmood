@@ -9,7 +9,7 @@ const projects = [
     problem: "Needed a personal portfolio to showcase skills and projects.",
     tech: "React, CSS",
     img: profilePic,
-    link: "#",
+    link: "case-study",
   },
   {
     id: 2,
