@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "../styles/ProjectsSection.css";
 import profilePic from "./profile.jpg"; // replace with your image
 
@@ -47,9 +47,33 @@ const projects = [
 
 const ProjectsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const touchStartX = useRef(null);
 
   const handleDotClick = (index) => {
     setCurrentIndex(index);
+  };
+
+  // Swipe Start
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  // Swipe End
+  const handleTouchEnd = (e) => {
+    if (!touchStartX.current) return;
+
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+
+    if (diff > 50 && currentIndex < projects.length - 1) {
+      // swipe left
+      setCurrentIndex((prev) => prev + 1);
+    } else if (diff < -50 && currentIndex > 0) {
+      // swipe right
+      setCurrentIndex((prev) => prev - 1);
+    }
+
+    touchStartX.current = null;
   };
 
   return (
@@ -60,7 +84,9 @@ const ProjectsSection = () => {
         className="projects-container"
         style={{
           transform: `translateX(calc(-${currentIndex * 89}% + 10% ))`,
-        }} // 80% so side cards visible
+        }}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         {projects.map((project) => (
           <div className="project-card" key={project.id}>

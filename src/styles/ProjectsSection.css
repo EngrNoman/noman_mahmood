@@ -1,6 +1,8 @@
 .projects-section {
-  background-color: #111;
-  color: #fff;
+  background-color: #0d0d0d;
+  /* darker background */
+  color: #f0f0f0;
+  /* lighter text */
   padding: 2rem 1rem;
   text-align: center;
   overflow: hidden;
@@ -9,9 +11,10 @@
 .projects-section h2 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
+  color: #f39c12;
+  /* highlight title */
 }
 
-/* ---- Mobile (Carousel style) ---- */
 .projects-container {
   display: flex;
   transition: transform 0.4s ease-in-out;
@@ -19,13 +22,18 @@
 
 .project-card {
   flex: 0 0 80%;
-  /* card 80% width so next/prev peek */
   margin: 0 10px;
-  background-color: #1e1e1e;
+  background-color: #1a1a1a;
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(243, 156, 18, 0.3);
 }
 
 .project-card img {
@@ -45,7 +53,7 @@
 .project-card .problem {
   font-size: 0.9rem;
   margin-bottom: 0.6rem;
-  color: #ccc;
+  color: #ddd;
 }
 
 .project-card .tech {
@@ -55,8 +63,8 @@
 }
 
 .view-btn {
-  background: #fff;
-  color: #111;
+  background: #f39c12;
+  color: #fff;
   padding: 0.5rem 1.2rem;
   border: none;
   border-radius: 6px;
@@ -65,8 +73,8 @@
 }
 
 .view-btn:hover {
-  background: #f39c12;
-  color: #fff;
+  background: #fff;
+  color: #111;
 }
 
 /* Dots */
@@ -88,10 +96,10 @@
 }
 
 .dot.active {
-  background-color: #fff;
+  background-color: #f39c12;
 }
 
-/* ---- Tablet (2 per row) ---- */
+/* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
   .projects-container {
     flex-wrap: wrap;
@@ -109,7 +117,7 @@
   }
 }
 
-/* ---- Desktop (4 per row) ---- */
+/* Desktop */
 @media (min-width: 1024px) {
   .projects-container {
     flex-wrap: wrap;
