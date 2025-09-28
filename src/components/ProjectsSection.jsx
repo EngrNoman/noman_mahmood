@@ -98,7 +98,8 @@ const ProjectsSection = () => {
               <strong>Tech:</strong> {project.tech}
             </p>
 
-            <Link to={`/case-study`}>
+            {/* ✅ yahan route fix kiya: projectdetail → project */}
+            <Link to={`/project/${project.id}`}>
               <button className="view-btn">View</button>
             </Link>
           </div>

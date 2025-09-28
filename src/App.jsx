@@ -1,12 +1,13 @@
+// App.jsx
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import CaseStudy from "./pages/CaseStudy.jsx";
+import ProjectDetail from "./pages/ProjectDetail.jsx";
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/case-study" element={<CaseStudy />} />
+      <Route path="/project/:id" element={<ProjectDetail />} />
     </Routes>
   );
 }
